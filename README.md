@@ -25,7 +25,7 @@ A fentebbi ijesztgetés ellenére megpróbáltam mindent megtenni, hogy a szkrip
 
     Ha ez nem jelenne meg, akkor a Tampermonkey ikonjára kattintva a `Neptun Codegen` alatt kattints a `Kulcs módosítása` gombra. Itt pedig írd be a Neptunban megjelenő ablakban kijelzett (56 számból és betűből álló) kulcsot, vagy a kijelzett QR kód tartalmát (`otpauth://`-al kezdődő link). A 2FA alkalmazás által generált, 6 számból álló kód **nem megfelelő**.
 
-5. Fejezd be a 2FA beállítását a Neptunban. Ehhez a (biztonság kedvéért) szükséged lesz egy másik 2FA generáló alkalmazásra (pl.: Google Authenticator, Authy, 2FAS, Bitwarden, stb.). Ezt a beállítás után nem kell használnod, viszont ha a szkript elromlana, véletlenül kitörölnéd belőle a kulcsot vagy más eszközön akarsz bejelentkezni (pl. sulis gép vizsgán), akkor jól fog jönni.
+5. Fejezd be a 2FA beállítását a Neptunban. Ehhez (a biztonság kedvéért) szükséged lesz egy másik 2FA generáló alkalmazásra (pl.: Google Authenticator, Authy, 2FAS, Bitwarden, stb.). Ezt a beállítás után nem kell használnod, viszont ha a szkript elromlana, véletlenül kitörölnéd belőle a kulcsot vagy más eszközön akarsz bejelentkezni (pl. sulis gép vizsgán), akkor jól fog jönni.
 6. Elkészültél! Ha kilépsz a Neptunból, beírod a jelszót, a `Bejelentkezés` gombra kattintás után pillanatok alatt újra bent kell legyél! :)
 
 Ha más eszközön szeretnél bejelentkezni, akkor a Tampermonkey ikonjára kattintva a `Neptun Codegen` alatt a `Kód generálása` gombbal tudsz egyszeri 2FA kódot generálni.

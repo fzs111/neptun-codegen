@@ -46,6 +46,11 @@ const KEY_LENGTH = 35; //bytes
         GM.registerMenuCommand('Kód generálása', async () => {
             const totp = await loadTOTPGenerator();
 
+            if(!totp) {
+                alert('Még nincs kulcs beállítva!\nKulcs beállításához használd a "Kulcs módosítása" gombot. Kövesd végig a telepítési útmutatót a https://github.com/fzs111/neptun-codegen oldalon!');
+                return;
+            }
+
             alert(totp.generate());
         });
     }
@@ -103,11 +108,16 @@ const KEY_LENGTH = 35; //bytes
                 alert('Mentve!');
                 return;
             }
-        })
+        });
     }
 
     async function handleLoginPage() {
         const totp = await loadTOTPGenerator();
+
+        if(!totp) {
+            alert('Üdvözöl a Neptun Codegen: még nincs kulcs beállítva.\n\nBejelentkezés után a 2FA beállításoknál újra be kell kapcsolnod a 2FA-t, vagy beírnod a kulcsot a "Kulcs módosítása" menüpontban, hogy a Neptun Codegen működjön. Kövesd a telepítési útmutatót a https://github.com/fzs111/neptun-codegen oldalon!\n\nHa nem akarod többet látni ezt a figyelmezetést, kapcsold ki a Neptun Codegen-t a Tampermonkey-ben!');
+            return;
+        }
 
         function update() {
             if(document.querySelector('#tokenValidationModal')?.style.display !== 'none') {
@@ -119,7 +129,7 @@ const KEY_LENGTH = 35; //bytes
             }
         }
 
-        const observer = new MutationObserver(update)
+        const observer = new MutationObserver(update);
 
         observer.observe(document.querySelector('#tokenValidationModal'), { attributes: true });
 
@@ -128,6 +138,10 @@ const KEY_LENGTH = 35; //bytes
 
     async function loadTOTPGenerator() {
         const secretString = await GM.getValue('secret', null);
+        if(secretString === null) {
+            return null;
+        }
+
         const secret = Secret.fromBase32(secretString);
 
         const totp = new TOTP({ secret });
@@ -146,7 +160,7 @@ const KEY_LENGTH = 35; //bytes
 
             if(secretElement !== newSecretElement) {
                 secretElement = newSecretElement;
-                observer.observe(secretElement, { characterData: true })
+                observer.observe(secretElement, { characterData: true });
             }
 
             const savedSecret = await GM.getValue('secret', null);
