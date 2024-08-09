@@ -6,11 +6,13 @@
 // @author          FZs
 // @copyright       Copyright © 2024 FZs
 // @include         https://*neptun*/*hallgato*/*
+// @match           https://neptun.uni-obuda.hu/hallgato/*
 // @require         https://cdnjs.cloudflare.com/ajax/libs/otpauth/9.3.1/otpauth.umd.min.js
 // @grant           GM.getValue
 // @grant           GM.setValue
 // @grant           GM.registerMenuCommand
 // @homepage        https://github.com/fzs111/neptun-codegen
+// @homepageURL     https://github.com/fzs111/neptun-codegen
 // @supportURL      https://github.com/fzs111/neptun-codegen/issues
 // @updateURL       https://raw.githubusercontent.com/fzs111/neptun-codegen/main/userscript.js
 // @downloadURL     https://raw.githubusercontent.com/fzs111/neptun-codegen/main/userscript.js
