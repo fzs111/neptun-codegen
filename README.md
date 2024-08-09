@@ -18,7 +18,7 @@ A fentebbi ijesztgetés ellenére megpróbáltam mindent megtenni, hogy a szkrip
 
 1. [Telepítsd a Tampermonkey bővítményt](https://www.tampermonkey.net/#download) az általad kedvelt böngészőbe
 2. Kattints rá <a href="https://raw.githubusercontent.com/fzs111/neptun-codegen/main/userscript.user.js" target="_blank" >erre a linkre</a>! A Tampermonkey fel kell, hogy ismerje, hogy szkriptet szeretnél hozzáadni. Ha mégsem így lenne, [kézzel is hozzáadhatod](https://www.tampermonkey.net/faq.php#Q102).
-3. Ellenőrizd, hogy a szkript fut, amikor meglátogatod a Neptunt a Tampermonkey ikonjára kattintva. 
+3. Ellenőrizd a Tampermonkey ikonjára kattintva, hogy a szkript fut, amikor meglátogatod a Neptunt. 
 
     A szkript az Óbudai Egyetem Neptunjához készült, de lehet, hogy a te egyetemeden is működik. Ha nem látod a futó szkriptek listájában, akkor [add hozzá kézzel](https://www.tampermonkey.net/faq.php#Q103) az egyetemed Neptunjának az URL-jét az engedélyezett weboldalak listájához a Tampermonkeyban a szkript beállításainál. Figyelj arra, hogy a cím végére tegyél `*`-ot, hogy a Neptun minden oldalán fusson a szkript.
 4. Lépj be a Neptunba, és navigálj a `Saját adatok > Beállítások` oldalon a `Kétfaktoros hitelesítés` fülre. Ha eddig is használtál 2FA-t a Neptunhoz, akkor sajnos ki kell kapcsolnod, majd újra be. Ha eddig nem használtál 2FA-t, akkor most be kell kapcsolnod. Ekkor egy ablaknak kell feljönnie a következő címmel: `Neptun Codegen: Kulcs mentve!`. 
