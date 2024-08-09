@@ -151,7 +151,7 @@ const KEY_LENGTH = 35; //bytes
 
             if(secretElement.innerText !== savedSecret) {
                 await GM.setValue('secret', secretElement.innerText);
-                alert('Neptun Codegen: kulcs mentve!\n\nHa most engedélyezed a 2FA-t, akkor nincs is más teendőd, következő bejelentkezésnél már nem kell megadnod a 2FA kódot.');
+                alert('Neptun Codegen: kulcs mentve!\n\nHa most engedélyezed a 2FA-t, akkor nincs is más teendőd, a következő bejelentkezésnél már nem kell megadnod a 2FA kódot.');
             }
 
 

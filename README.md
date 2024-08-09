@@ -10,14 +10,14 @@ Ha a Neptunon bekapcsolod a kétfaktoros azonosítást (2FA), akkor bejelentkez�
 
 ## FIGYELMEZETÉS!
 
-**A MIT licensz alapján SEMMILYEN felelősséget nem vállalok a szkript működésével kapcsolatban!** Ebbe beletartozik a fiókodból való kizáródás vagy a 2FA azonosító kódjának elvesztése, ellopása (a szkript titkosítás nélkül tárolja). Akkor használd ezt a szkriptet, ha biztonságban éreznéd a fiókod akkor, ha a 2FA ki lenne kapcsolva.
+**A MIT licensz alapján SEMMILYEN felelősséget nem vállalok a szkript működésével kapcsolatban!** Ebbe beletartozik a fiókodból való kizáródás vagy a 2FA kulcsának elvesztése, ellopása (a szkript titkosítás nélkül tárolja). Akkor használd ezt a szkriptet, ha biztonságban éreznéd a fiókod akkor, ha a 2FA ki lenne kapcsolva.
 
 A fentebbi ijesztgetés ellenére megpróbáltam mindent megtenni, hogy a szkript megfelelően működjön, elvégre *én magam is ezt használom*.
 
 ## Telepítés és beállítás
 
 1. [Telepítsd a Tampermonkey bővítményt](https://www.tampermonkey.net/#download) az általad kedvelt böngészőbe
-2. Kattints rá [erre a linkre](https://raw.githubusercontent.com/fzs111/neptun-codegen/main/userscript.js)! A Tampermonkey fel kell, hogy ismerje, hogy szriptet szeretnél hozzáadni. Ha mégsem így lenne, [kézzel is hozzáadhatod](https://www.tampermonkey.net/faq.php#Q102).
+2. Kattints rá [erre a linkre](https://raw.githubusercontent.com/fzs111/neptun-codegen/main/userscript.js)! A Tampermonkey fel kell, hogy ismerje, hogy szkriptet szeretnél hozzáadni. Ha mégsem így lenne, [kézzel is hozzáadhatod](https://www.tampermonkey.net/faq.php#Q102).
 3. Ellenőrizd, hogy a szkript fut, amikor meglátogatod a Neptunt a Tampermonkey ikonjára kattintva. 
 
     A szkript az Óbudai Egyetem Neptunjához készült, de lehet, hogy a te egyetemeden is működik. Ha nem látod a futó szkriptek listájában, akkor [add hozzá kézzel](https://www.tampermonkey.net/faq.php#Q103) az egyetemed Neptunjának az URL-jét az engedélyezett weboldalak listájához a Tampermonkeyban a szkript beállításainál. Figyelj arra, hogy a cím végére tegyél `*`-ot, hogy a Neptun minden oldalán fusson a szkript.
