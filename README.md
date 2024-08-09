@@ -17,7 +17,7 @@ A fentebbi ijesztgetés ellenére megpróbáltam mindent megtenni, hogy a szkrip
 ## Telepítés és beállítás
 
 1. [Telepítsd a Tampermonkey bővítményt](https://www.tampermonkey.net/#download) az általad kedvelt böngészőbe
-2. Kattints rá [erre a linkre](https://raw.githubusercontent.com/fzs111/neptun-codegen/main/userscript.js)! A Tampermonkey fel kell, hogy ismerje, hogy szkriptet szeretnél hozzáadni. Ha mégsem így lenne, [kézzel is hozzáadhatod](https://www.tampermonkey.net/faq.php#Q102).
+2. Kattints rá <a href="https://raw.githubusercontent.com/fzs111/neptun-codegen/main/userscript.user.js" target="_blank" >erre a linkre</a>! A Tampermonkey fel kell, hogy ismerje, hogy szkriptet szeretnél hozzáadni. Ha mégsem így lenne, [kézzel is hozzáadhatod](https://www.tampermonkey.net/faq.php#Q102).
 3. Ellenőrizd, hogy a szkript fut, amikor meglátogatod a Neptunt a Tampermonkey ikonjára kattintva. 
 
     A szkript az Óbudai Egyetem Neptunjához készült, de lehet, hogy a te egyetemeden is működik. Ha nem látod a futó szkriptek listájában, akkor [add hozzá kézzel](https://www.tampermonkey.net/faq.php#Q103) az egyetemed Neptunjának az URL-jét az engedélyezett weboldalak listájához a Tampermonkeyban a szkript beállításainál. Figyelj arra, hogy a cím végére tegyél `*`-ot, hogy a Neptun minden oldalán fusson a szkript.

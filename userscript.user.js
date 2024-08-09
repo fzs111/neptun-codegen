@@ -14,8 +14,8 @@
 // @homepage        https://github.com/fzs111/neptun-codegen
 // @homepageURL     https://github.com/fzs111/neptun-codegen
 // @supportURL      https://github.com/fzs111/neptun-codegen/issues
-// @updateURL       https://raw.githubusercontent.com/fzs111/neptun-codegen/main/userscript.js
-// @downloadURL     https://raw.githubusercontent.com/fzs111/neptun-codegen/main/userscript.js
+// @updateURL       https://raw.githubusercontent.com/fzs111/neptun-codegen/main/userscript.user.js
+// @downloadURL     https://raw.githubusercontent.com/fzs111/neptun-codegen/main/userscript.user.js
 // ==/UserScript==
 
 const KEY_LENGTH = 35; //bytes
