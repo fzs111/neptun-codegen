@@ -14,6 +14,10 @@ Ha a Neptunon bekapcsolod a kétfaktoros azonosítást (2FA), akkor bejelentkez�
 
 A fentebbi ijesztgetés ellenére megpróbáltam mindent megtenni, hogy a szkript megfelelően működjön, elvégre *én magam is ezt használom*.
 
+## Új Neptun
+
+Ez a verzió részlegesen támogatja az új Neptun felületet. Jelenleg nem észleli automatikusan az új felületen beállított 2FA-t, a beállítás után manuálisan kell a szkriptben beállítani a kódot.
+
 ## Telepítés és beállítás
 
 1. [Telepítsd a Tampermonkey bővítményt](https://www.tampermonkey.net/#download) az általad kedvelt böngészőbe

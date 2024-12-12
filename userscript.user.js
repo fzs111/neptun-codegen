@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            Neptun Codegen
 // @namespace       http://tampermonkey.net/
-// @version         1.0.4
+// @version         1.1.0
 // @description:hu  Automatikus 2FA generátor Neptunhoz, hogy ne a CAPTCHA miatt maradj le a tárgyfelvételről
 // @author          FZs
 // @copyright       Copyright © 2024 FZs
