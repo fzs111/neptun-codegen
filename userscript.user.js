@@ -7,6 +7,7 @@
 // @copyright       Copyright © 2024 FZs
 // @include         https://*neptun*/*hallgato*/*
 // @match           https://neptun.uni-obuda.hu/hallgato/*
+// @match           https://neptun.uni-obuda.hu/ujhallgato/*
 // @require         https://cdnjs.cloudflare.com/ajax/libs/otpauth/9.3.1/otpauth.umd.min.js
 // @grant           GM.getValue
 // @grant           GM.setValue
@@ -31,6 +32,8 @@ const KEY_LENGTH = 35; //bytes
 
     if(/login.aspx/i.test(pathname)) {
         handleLoginPage();
+    } else if(/login/i.test(pathname)) {
+        handleNewLoginPage();
     }
 
     if(/main.aspx/i.test(pathname) && /ctrl=0104/i.test(search)) {
@@ -135,6 +138,66 @@ const KEY_LENGTH = 35; //bytes
 
         setInterval(update, 30000);
     }
+
+    async function handleNewLoginPage() {
+        const totp = await loadTOTPGenerator();
+
+        if(!totp) {
+            alert('Üdvözöl a Neptun Codegen: még nincs kulcs beállítva.\n\nBejelentkezés után a 2FA beállításoknál újra be kell kapcsolnod a 2FA-t, vagy beírnod a kulcsot a "Kulcs módosítása" menüpontban, hogy a Neptun Codegen működjön. Kövesd a telepítési útmutatót a https://github.com/fzs111/neptun-codegen oldalon!\n\nHa nem akarod többet látni ezt a figyelmezetést, kapcsold ki a Neptun Codegen-t a Tampermonkey-ben!');
+            return;
+        }
+
+
+        //setInterval(modalOpened, 30000);
+
+        const appRootObserver = new MutationObserver(checkIfModalIsOpened);
+
+        appRootObserver.observe(document.body, { childList: true, subtree: true });
+        /*
+        const modalObserver = new MutationObserver(modalOpened);
+        
+        function pageLoaded() {
+
+            const modalContainer = document.querySelector('.cdk-overlay-container');
+
+            if(!modalContainer) {
+                console.info('[Neptun-Codegen]: modal container not found')
+                return;
+            }
+
+            modalObserver.disconnect();
+            modalObserver.observe(modalContainer, { childList: true });
+            console.info('[Neptun-Codegen]: observing modal container')
+        }
+        */
+        function checkIfModalIsOpened() {
+            const modal = document.querySelector('neptun-two-factor-dialog-content');
+            if(!modal) {
+                console.info('[Neptun-Codegen]: modal element not found')
+
+                return;
+            }
+            modalOpened(modal);
+        }
+
+        function modalOpened(modal) {
+            console.info('[Neptun-Codegen]: logging in...');
+
+            const token = totp.generate();
+
+            const codeInput = modal.querySelector('#two-factor-qr-code-input-form-input');
+            // Fill in 2FA token
+            codeInput.value = token;
+
+            // Trigger an event to let Angular know the value was updated
+            const event = new InputEvent('input', { inputType: 'insertText', data: token });
+            codeInput.dispatchEvent(event);
+
+            // Click Login button
+            modal.querySelector('#login-button')?.click();
+        }
+    }
+
 
     async function loadTOTPGenerator() {
         const secretString = await GM.getValue('secret', null);
